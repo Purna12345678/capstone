@@ -1,0 +1,120 @@
+.chatbot {
+    background: linear-gradient(135deg, #a8c8ff 0%, #7aaaff 100%);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(122, 170, 255, 0.4);
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.chat-window {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #7a7a7a transparent;
+}
+
+.chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 4px;
+}
+
+.message {
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 20px;
+    max-width: 75%;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+    background-color: #8bb8ff;
+    color: #1a1a1a;
+    margin-left: auto;
+    text-align: right;
+    box-shadow: 0 2px 8px rgba(139, 184, 255, 0.6);
+}
+
+.message.bot {
+    background-color: #e1eaff;
+    color: #1a1a1a;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(225, 234, 255, 0.6);
+}
+
+.input-area {
+    display: flex;
+    gap: 12px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(122, 170, 255, 0.4);
+    justify-content: flex-end;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #8baaff;
+    background-color: #f5f8ff;
+    color: #1a1a1a;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-area input:focus {
+    outline: none;
+    border-color: #7aaaff;
+    box-shadow: 0 0 8px #7aaaff;
+}
+
+.input-area button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0f8221;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #1ea632;
+    box-shadow: 0 0 12px #5a8dee;
+}
+
+@media (max-width: 640px) {
+    .chatbot {
+        max-width: 100%;
+        padding: 1rem;
+        margin-left: 0;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+
+    .input-area button {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+}
